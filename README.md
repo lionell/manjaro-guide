@@ -76,6 +76,22 @@ For more options see `/usr/share/X11/xkb/symbols/ctrl` and `/usr/share/X11/xkb/s
 1.  Calibrate PowerTOP `sudo powertop --calibrate`.
 1.  Navigate to "Tunables" tab and fix all the remaining issues by pressing enter staying on it.
 
-### Install `git`
+Find more information about [TLP](https://wiki.archlinux.org/index.php/TLP) and [PowerTOP](https://wiki.archlinux.org/index.php/powertop).
 
-1.  Run `sudo pacman -S git`
+### Install Google Chrome
+
+Run `yaourt google-chrome` and select stable chanel.
+
+### Setup git and generate new SSH keypair
+
+1.  Run `sudo pacman -S git` to install.
+1.  Generate new SSH keypair by running `ssh-keygen -t rsa -b 4096 -C 'xlionell@gmail.com'`.
+1.  Start SSH agent in background `eval $(ssh-agent -s)`.
+1.  Add key to SSH agent `ssh-add ~/.ssh/id_rsa`.
+1.  Install xclip `sudo pacman -S xclip`.
+1.  Copy public key to clipboard `xclip -sel clip < ~/.ssh/id_rsa.pub`.
+1.  Go to [github.com/settings/keys](https://github.com/settings/keys) and add new key.
+
+### Install Apache Stow
+
+Run `sudo pacman -S stow`.
