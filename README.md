@@ -33,14 +33,14 @@ Notes to reproduce my [Manjaro](https://manjaro.org) setup.
     
     **ISSUE!** If you see `error: GPGME error: No data` try running `sudo pacman-key --init`.
 
-1.  Look for latest stable kernel and run `sudo mhwd-kernel -i linux49` to install.
+1.  Look for latest stable kernel and run `sudo mhwd-kernel -i linuxYY` to install.
 
 Find more information [here](https://wiki.manjaro.org/index.php/Manjaro_Kernels).
 
-### Update `pacman` mirrors
+### Update pacman mirrors
 
 1.  To generate mirrorlist run `sudo pacman-mirrors -g`. 
-1.  Sync `pacman` local database with new mirrorlist by running `sudo pacman -Syy`.
+1.  Sync pacman local database with new mirrorlist by running `sudo pacman -Syy`.
 
 Find more information [here](https://wiki.manjaro.org/index.php?title=Pacman-mirrors)
 
@@ -52,6 +52,30 @@ Run `sudo pacman -Suy` to upgrade all installed software.
 
 1.  Open `/usr/share/X11/xkb/symbols/pc` for writing.
 1.  Substitute `include "altwin(alt_meta)"` with `include "altwin(ctrl_alt_win)"`.
+1.  Open `~/.i3/config` for writing.
+1.  Change `set $mod Mod4` to `set $mod Mod1`.
 1.  Restart the system `sudo reboot`.
 
 For more options see `/usr/share/X11/xkb/symbols/ctrl` and `/usr/share/X11/xkb/symbols/altwin`.
+
+### Tune power usage
+
+1.  Install TLP `sudo pacman -S tlp`.
+1.  Start TLP `sudo tlp start`.
+1.  Mask unnecessarry services.
+    ```shell
+    sudo systemctl mask systemd-rfkill.service
+    sudo systemctl mask systemd-rfkill.socket
+    ```
+1.  Install ThinkPad specific kernel modules.
+    ```shell
+    sudo pacman -S linuxYY-tp_smapi
+    sudo pacman -S linuxYY-acpi_call
+    ```
+1.  Install PowerTOP `sudo pacman -S powertop`.
+1.  Calibrate PowerTOP `sudo powertop --calibrate`.
+1.  Navigate to "Tunables" tab and fix all the remaining issues by pressing enter staying on it.
+
+### Install `git`
+
+1.  Run `sudo pacman -S git`
