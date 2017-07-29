@@ -1,4 +1,5 @@
 # Manjaro installation guide
+
 Notes to reproduce my [Manjaro](https://manjaro.org) setup.
 
 ## Preinstall
@@ -35,3 +36,22 @@ Notes to reproduce my [Manjaro](https://manjaro.org) setup.
 1.  Look for latest stable kernel and run `sudo mhwd-kernel -i linux49` to install.
 
 Find more information [here](https://wiki.manjaro.org/index.php/Manjaro_Kernels).
+
+### Update `pacman` mirrors
+
+1.  To generate mirrorlist run `sudo pacman-mirrors -g`. 
+1.  Sync `pacman` local database with new mirrorlist by running `sudo pacman -Syy`.
+
+Find more information [here](https://wiki.manjaro.org/index.php?title=Pacman-mirrors)
+
+### Upgrade your system
+
+Run `sudo pacman -Suy` to upgrade all installed software.
+
+### Remap CTRL -> ALT -> WIN -> CTRL
+
+1.  Open `/usr/share/X11/xkb/symbols/pc` for writing.
+1.  Substitute `include "altwin(alt_meta)"` with `include "altwin(ctrl_alt_win)"`.
+1.  Restart the system `sudo reboot`.
+
+For more options see `/usr/share/X11/xkb/symbols/ctrl` and `/usr/share/X11/xkb/symbols/altwin`.
