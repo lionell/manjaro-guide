@@ -28,6 +28,10 @@ Notes to reproduce my [Manjaro](https://manjaro.org) setup.
 ## Setup
 
 ### Update kernel
-1.  List all available kernels `mhwd-kernel -li`
+1.  List all available kernels `mhwd-kernel -l`
     
-    **ISSUE!** If you are seeing `error: GPGME error: No data` try running `sudo pacman-key --init`.
+    **ISSUE!** If you see `error: GPGME error: No data` try running `sudo pacman-key --init`.
+
+1.  Look for latest stable kernel and run `sudo mhwd-kernel -i linux49` to install.
+
+Find more information [here](https://wiki.manjaro.org/index.php/Manjaro_Kernels).
