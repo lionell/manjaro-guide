@@ -95,4 +95,25 @@ Run `yaourt google-chrome` and select stable chanel.
 
 ### Pull .dotfiles from GitHub
 
-1.  Install Apache Stow `sudo pacman -S stow`.
+1.  Install Apache Stow `sudo pacman -S stow`
+1.  Pull repo from GitHub `git --recursive -j8 clone git@github.com:lionell/.dotfiles.git`
+
+### Config terminal emulator
+
+1.  Install Termite `sudo pacman -S termite`
+1.  Install Adobe Source Code Pro font `sudo pacman -S adove-source-code-pro-fonts`
+1.  Use config from .dotfiles `stow termite`
+
+### Configure program launcher
+1.  Install Rofi `sudo pacman -S rofi`
+
+1.  Config git `stow git`
+1.  Merge i3 configs.
+    **NOTE!** This should be manual step as configs can differ from version to version.
+
+
+### Remove redundant stuff
+
+```shell
+sudo pacman -R morc_menu
+```
