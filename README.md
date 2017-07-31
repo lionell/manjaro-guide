@@ -101,13 +101,21 @@ Run `yaourt google-chrome` and select stable chanel.
 ### Config terminal emulator
 
 1.  Install Termite `sudo pacman -S termite`
-1.  Install Adobe Source Code Pro font `sudo pacman -S adove-source-code-pro-fonts`
-1.  Use config from .dotfiles `stow termite`
+1.  Install Adobe Source Code Pro font `sudo pacman -S adobe-source-code-pro-fonts`
+1.  Use config from dotfiles `stow termite`
 
 ### Configure program launcher
 1.  Install Rofi `sudo pacman -S rofi`
+1.  Use config from dotfiles `stow xresources`
 
-1.  Config git `stow git`
+### Config git
+
+Just run `stow git`
+
+### Setup i3
+1.  Install Font Awesome `yaourt ttf-font-awesome`
+1.  Install sysstat for cpu_usage script `sudo pacman -S sysstat`
+1.  Install i3blocks `sudo pacman -S i3blocks`
 1.  Merge i3 configs.
     **NOTE!** This should be manual step as configs can differ from version to version.
 
