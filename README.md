@@ -119,6 +119,15 @@ Just run `stow git`
 1.  Merge i3 configs.
     **NOTE!** This should be manual step as configs can differ from version to version.
 
+### Setup neovim
+1.  Install neovim `sudo pacman -S neovim`
+1.  Install python2 bindings for nvim `sudo pacman -S python2-neovim`
+1.  To link `vi` to `nvim` run `sudo ln -s /usr/bin/nvim /usr/bin/vi`
+1.  Open neovim and run `:PlugInstall` to install plugins from config.
+
+### Setup tmux
+1.  Install tmux `sudo pacman -S tmux`
+1.  Use config from dotfiles `stow tmux`
 
 ### Remove redundant stuff
 
