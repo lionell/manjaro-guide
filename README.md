@@ -2,6 +2,8 @@
 
 Notes to reproduce my [Manjaro](https://manjaro.org) setup.
 
+![screenshot]()
+
 ## Preinstall
 
 1.  Do a **FULL BACKUP**.
@@ -129,11 +131,14 @@ Just run `stow git`
 1.  Install tmux `sudo pacman -S tmux`
 1.  Use config from dotfiles `stow tmux`
 
-### Install fish
+### Config fish
 1.  Install fish `sudo pacman -S fish`
 1.  Change default shell to fish `chsh -s $(which fish)`. You will need to login again to see changes.
 1.  Install Oh-My-Fish `curl -L https://get.oh-my.fish | fish`
 1.  Install `pure` theme `omf install pure`
+
+### Usefull plugins for fish
+1.  Install z `omf install z`
 
 ### Remove redundant stuff
 
