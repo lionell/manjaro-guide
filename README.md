@@ -114,7 +114,7 @@ Just run `stow git`
 
 ### Setup i3
 1.  Install Font Awesome `yaourt ttf-font-awesome`
-1.  Install sysstat for cpu_usage script `sudo pacman -S sysstat`
+1.  Install sysstat for `cpu_usage` script `sudo pacman -S sysstat`
 1.  Install i3blocks `sudo pacman -S i3blocks`
 1.  Merge i3 configs.
     **NOTE!** This should be manual step as configs can differ from version to version.
@@ -128,6 +128,12 @@ Just run `stow git`
 ### Setup tmux
 1.  Install tmux `sudo pacman -S tmux`
 1.  Use config from dotfiles `stow tmux`
+
+### Install fish
+1.  Install fish `sudo pacman -S fish`
+1.  Change default shell to fish `chsh -s $(which fish)`. You will need to login again to see changes.
+1.  Install Oh-My-Fish `curl -L https://get.oh-my.fish | fish`
+1.  Install `pure` theme `omf install pure`
 
 ### Remove redundant stuff
 
