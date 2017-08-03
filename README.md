@@ -130,6 +130,22 @@ Just run `stow git`
 ### Setup tmux
 1.  Install tmux `sudo pacman -S tmux`
 1.  Use config from dotfiles `stow tmux`
+1.  Add new systemd module to automatically start tmux server
+    ```
+    // Put this in /etc/systemd/system/tmux.service
+    [Unit]
+    Description=Tmux server
+
+    [Service]
+    Type=forking
+    User=lionell
+    ExecStart=/usr/bin/tmux new -s 0 -d
+    ExecStop=/usr/bin/tmux kill-server
+
+    [Install]
+    WantedBy=multi-user.target
+    ```
+1.  Enable module `sudo systemctl enable tmux`
 
 ### Config fish
 1.  Install fish `sudo pacman -S fish`
