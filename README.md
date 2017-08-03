@@ -117,6 +117,7 @@ Just run `stow git`
 ### Setup i3
 1.  Install Font Awesome `yaourt ttf-font-awesome`
 1.  Install sysstat for `cpu_usage` script `sudo pacman -S sysstat`
+1.  Install xbacklight for brightness control `sudo pacman -S xorg-xbacklight`
 1.  Install i3blocks `sudo pacman -S i3blocks`
 1.  Merge i3 configs.
     **NOTE!** This should be manual step as configs can differ from version to version.
@@ -130,7 +131,7 @@ Just run `stow git`
 ### Setup tmux
 1.  Install tmux `sudo pacman -S tmux`
 1.  Use config from dotfiles `stow tmux`
-1.  Add new systemd module to automatically start tmux server
+1.  Add new systemd service to automatically start tmux server
     ```
     // Put this in /etc/systemd/system/tmux.service
     [Unit]
