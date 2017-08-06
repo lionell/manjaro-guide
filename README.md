@@ -118,6 +118,12 @@ Just run `stow git`
 1.  Install Font Awesome `yaourt ttf-font-awesome`
 1.  Install sysstat for `cpu_usage` script `sudo pacman -S sysstat`
 1.  Install xbacklight for brightness control `sudo pacman -S xorg-xbacklight`
+1.  Switch from Alsa Mixer to Pulse Audio by running premade script `install_pulse`
+1.  Disable unnecessary services 
+    ```
+    sudo systemctl disable alsa-state.service
+    sudo systemctl disable alsa-restore.service
+    ```
 1.  Install i3blocks `sudo pacman -S i3blocks`
 1.  Merge i3 configs.
     **NOTE!** This should be manual step as configs can differ from version to version.
