@@ -147,6 +147,11 @@ Just run `stow git`
 ### Usefull plugins for fish
 1.  Install z `omf install z`
 
+### Setup Yubikey support
+1.  Go to [https://github.com/Yubico/libu2f-host/blob/master/70-u2f.rules](https://github.com/Yubico/libu2f-host/blob/master/70-u2f.rules)
+    and place this file under `/etc/udev/rules.d/`
+1.  Reboot
+
 ### Remove redundant stuff
 
 ```shell
