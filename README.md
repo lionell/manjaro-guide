@@ -157,3 +157,9 @@ Just run `stow git`
 ```shell
 sudo pacman -R morc_menu
 ```
+
+### Setting up timezone
+
+```shell
+sudo cp /usr/share/zoneinfo/Europe/Kiev /etc/localtime
+```

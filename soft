@@ -1,0 +1,19 @@
+# How to install software
+
+sudo pacman -S docker
+sudo usermod -aG docker $USER
+
+sudo pacman -S go
+
+go get -u github.com/odeke-em/drive/cmd/drive
+drive init ~
+
+sudo pacman -S pacaur
+
+pacaur -S bazel
+
+pacaur -S intellij-idea-community-edition
+
+go get github.com/bazelbuild/buildtools/buildifier
+
+pacaur -S protobuf
